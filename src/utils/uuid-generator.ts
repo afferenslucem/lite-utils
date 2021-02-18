@@ -1,4 +1,8 @@
 import {Random} from "./random";
+<<<<<<< Updated upstream
+=======
+import crypto from 'crypto';
+>>>>>>> Stashed changes
 
 export class UUIDGenerator {
     private random = new Random();

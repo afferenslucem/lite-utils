@@ -111,7 +111,7 @@ describe('UUIDGenerator', () => {
         it('should create with same lengthes', () => {
             const reg = /^[0-9a-f]{8}-([0-9a-f]{4}-){3}[0-9a-f]{12}$/;
 
-            for (let i = 0; i < 32; i++) {
+            for (let i = 0; i < 128; i++) {
                 const rd = new UUIDGenerator('hrodvitnir');
 
                 const uuid = rd.generate();
@@ -211,7 +211,7 @@ describe('UUIDGenerator', () => {
         it('should get variant', () => {
             const rd = new UUIDGenerator('hrodvitnir');
 
-            for (let i = 0; i < 50; i++) {
+            for (let i = 0; i < 128; i++) {
                 // @ts-ignore
                 const stat: string = rd.getVariant();
                 assert.equal(stat.length, 1);
